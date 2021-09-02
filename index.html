@@ -7,7 +7,10 @@
   function onTelegramAuth(user) {
     var name = document.createElement("p");
     var text = document.createTextNode("Login user: " + user.first_name);
+    var image = document.createElement('img')
+    image.src = user.photo_url
     name.appendChild(text);
+    name.appendChild(image);
     var element = document.getElementById("namedisplay");
     element.appendChild(name)
     // alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
