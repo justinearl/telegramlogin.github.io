@@ -1,20 +1,19 @@
 <html>
-<body>
-<div id="namedisplay">
-</div>
-<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="login_sample_bot" data-size="large" data-auth-url="http://127.0.0.1:8000/login/telegram" data-request-access="write"></script>
-<script type="text/javascript">
-  function onTelegramAuth(user) {
-    var name = document.createElement("p");
-    var text = document.createTextNode("Login user: " + user.first_name);
-    var image = document.createElement('img')
-    image.src = user.photo_url
-    name.appendChild(text);
-    name.appendChild(image);
-    var element = document.getElementById("namedisplay");
-    element.appendChild(name)
-    // alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-  }
-</script>
+  <head>
+    <link rel="stylesheet" href="particle.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <div id="typed-strings">
+      <p>OK po HEHHEHEHHEHEHHEHEH</p>
+      <p>See you later</p>
+    </div>
+    <span id="typed"></span>
+    <script>
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings'
+      });
+    </script>
+
 </body>
 </html>
